@@ -1,69 +1,45 @@
 require 'spec_helper'
 
 describe "Static pages" do
-  
-  describe "Home Page" do
-    
-    it "should have the content 'Risk Management'" do
-			visit '/static_pages/home'
-			expect(page).to have_content('Risk Management')
-		end
-  	
-  	it "should have the title 'Home'" do
-  		visit '/static_pages/home'
-    	expect(page).to have_title("S&J Risk Management | Home")
-    end
+
+  subject { page }
+
+  describe "Home page" do
+    before { visit root_path }
+
+    it { should have_content('S&J Risk Management') }
+    it { should have_title(full_title('')) }
+    it { should_not have_title('| Home') }
   end
 
-	describe "About Page" do
-	
-		it "should have the content 'About'" do
-			visit '/static_pages/about'
-			expect(page).to have_content('About')
-		end
-	
-		it "should have the title 'About'" do
-  		visit '/static_pages/about'
-    	expect(page).to have_title("S&J Risk Management | About")
-    end
-	end
+  describe "Help page" do
+    before { visit help_path }
 
-	describe "Contact Page" do
-	
-		it "should have the content 'Contact'" do
-			visit '/static_pages/contact'
-			expect(page).to have_content('Contact')
-		end
-	
-		it "should have the title 'Contact'" do
-  		visit '/static_pages/contact'
-    	expect(page).to have_title("S&J Risk Management | Contact")
-    end
-	end
+    it { should have_content('Help') }
+    it { should have_title(full_title('Help')) }
+  end
 
-	describe "Help Page" do
+  describe "About page" do
+    before { visit about_path }
+
+    it { should have_content('About') }
+    it { should have_title(full_title('About')) }
+  end
+
+  describe "Contact page" do
+    before { visit contact_path }
+
+    it { should have_content('Contact') }
+    it { should have_title(full_title('Contact')) }
+  end
+
 	
-		it "should have the content 'Help'" do
-			visit '/static_pages/help'
-			expect(page).to have_content('Help')
-		end
-	
-		it "should have the title 'Help'" do
-  		visit '/static_pages/help'
-    	expect(page).to have_title("S&J Risk Management | Help")
-    end
-	end
-	
+
+#change this one
 	describe "Training Page" do
+		before { visit training_path }
 	
-		it "should have the content 'Training'" do
-			visit '/static_pages/training'
-			expect(page).to have_content('Training')
-		end
-	
-		it "should have the title 'Training'" do
-  		visit '/static_pages/training'
-    	expect(page).to have_title("S&J Risk Management | Training")
-    end
+		it { should have_content('Training') } 
+  	it { should have_title(full_title('Training')) } 
 	end
 end
