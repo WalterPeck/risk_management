@@ -6,13 +6,47 @@
                                            "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
     <%= csrf_meta_tags %>
+	
+
 		<%= render 'layouts/shim'%>
   </head>
   <body>
 		<%= render 'layouts/header' %>
+   <% if current_page?('/')%> 
+    <div id="myCarousel" class="carousel slide">
+
+     
+    <div class="carousel-inner">
+
+        <div class="item active">
+						<%= image_tag('background_2.jpg', class:'test')%>
+            <div class="container welcome">
+                <div class='row'>  
+              		<div class='span4'>
+              			   
+              			  <%=image_tag('logo_big.gif', class: 'poop')%>
+              		
+              		</div>
+              		</div>
+              <!--  <div class="carousel-caption">
+               
+                    <h1>HELLO</h1>
+                    
+                    <a class="btn btn-large btn-primary" href="#"></a>
+                		
+                </div> -->
+            </div>
+        </div>
+        </div>
+        </div>
+       	<div class="center container marketing ">
+       	<%= yield %>
+       	</div>
+       <% else%>
     <div class="container">
       <%= yield %>
     	<%= render 'layouts/footer'%>
     </div>
+  	<%end%>
   </body>
 </html>

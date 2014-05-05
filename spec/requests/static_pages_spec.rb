@@ -33,8 +33,13 @@ describe "Static pages" do
     it { should have_title(full_title('Contact')) }
   end
 
-	
-
+	describe "Sevices pages" do
+		before { visit services_path }
+		
+		it { should have_content('Services') }
+		it { should have_title(full_title('Services')) }
+  
+  end
 #change this one
 	describe "Training Page" do
 		before { visit training_path }

@@ -4,15 +4,68 @@
 
 $grayMediumLight: #eaeaea;
 
+#row {
+		padding-top: 50px;
+		
+		}
+		
+
+
 /* universal */
 
-html {
+ /* html { 
+  background: url('backround_1.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	overflow-y: scroll;
+} */ 
+
+ html {
   overflow-y: scroll;
+} 
+
+
+.block {
+	/*background-color:rgba(0,0,0,0.2); */
+    /* height:370px; */
+  	background-color:#ffffff;
+  	opacity:0.6;
+  	padding-top: 20px;
+  	padding-bottom: 20px;
+  	padding-left:12px;
+  	padding-right:12px;
 }
 
+
 body {
-  padding-top: 60px;
+/*	background: url('background_2.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; */
+	  color: $grayLight;  
+  	background-color: white;
+   
+
 }
+
+
+
+.hero-unit {
+  background:rgba(0,0,0,0.5);
+	
+
+} 
+
+.poop {
+width: 40px;
+}
+
+/*.hey {
+	float: right;
+} */
 
 section {
   overflow: auto;
@@ -49,7 +102,17 @@ h2 {
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: noraml;
-	color: $grayLight;
+	color: white;
+}
+
+h3 {
+	font-size: 1.8em; 
+
+	margin-bottom: 30px;
+	letter-spacing: 1px;
+	text-align: center;
+	font-weight: noraml;
+	color: white;
 }
 
 p {
@@ -75,17 +138,25 @@ p {
 	}
 }
 
+  
+.navbar .nav > li > a {
+	color: white;
+	&:hover {
+			color: $grayLight;
+		}
+}
+
 /* footer */
 
 footer {
 	margin-top: 45px;
 	padding-top: 5px;
 	border-top: 1px solid $grayMediumLight;
-	color: $grayLight;
+	color: blue;
   a {
-		color: $gray;
+		color: blue;
 		&:hover {
-			color: $grayDarker;
+			color: $grayLight;
 		}
 	}
 	small {
@@ -99,4 +170,87 @@ footer {
 			margin-left: 10px;
 		}
 	}
+}
+
+/* Carasel */
+
+    .carousel {
+      margin-bottom: 30px;
+    	margin-top: 41px;
+    }
+
+    .carousel .welcome {
+   
+      position: relative;
+      z-index: 9;
+    }
+
+    /* .carousel-control {
+      height: 80px;
+      margin-top: 0;
+      font-size: 120px;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+      background-color: transparent;
+      border: 0;
+      z-index: 10;
+    } */
+
+    .carousel .item {
+      height: 400px;
+    }
+    .carousel .test {
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      height: 400px;
+    }
+     
+    .carousel-caption {
+      background-color: transparent;
+      position: static;
+      max-width: 550px;
+      padding: 0 20px;
+      margin-top: 200px;
+    }
+    .carousel-caption h1,
+    .carousel-caption .lead {
+      margin: 0;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 1px 1px rgba(0,0,0,.4);
+    }
+    .carousel-caption .btn {
+      margin-top: 10px;
+    }
+    
+  /* MARKETING CONTENT
+    -------------------------------------------------- */
+
+    /* Center align the text within the three columns below the carousel */
+    .marketing .span4 {
+      text-align: center;
+    }
+    .marketing h2 {
+      font-weight: normal;
+    }
+    .marketing .span4 p {
+      margin-left: 10px;
+      margin-right: 10px;
+    	text-align: center;
+    }
+ 
+    .marketing .span4 {
+        margin-top: 40px;
+      }   
+   
+   
+.marketing .img-circle {
+    border-radius: 500px;
+}
+
+.poop {
+	min-width: 339px;
+	
+	height: auto;
 }

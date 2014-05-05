@@ -4,6 +4,7 @@ RiskManagement::Application.routes.draw do
   match '/contact',  to: "static_pages#contact",  via: 'get'
   match '/help', 		 to: "static_pages#help",     via: 'get'
   match '/training', to: "static_pages#training", via: 'get'
+  match '/services', to: "static_pages#services", via: 'get'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
